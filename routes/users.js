@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 
 //get all followers
 router.get('/followers/:id', (req, res) => {
-    User.getFollowers(req.userID)
+    User.getFollowers(req.params.id)
     .then(followers => {
         res.send(followers);
     })
@@ -30,7 +30,7 @@ router.get('/followers/:id', (req, res) => {
 
 //get all followees
 router.get('/following/:id', (req, res) => {
-    User.getFollowing(req.userID)
+    User.getFollowing(req.params.id)
     .then(following => {
         res.send(following);
     })
