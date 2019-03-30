@@ -25,7 +25,7 @@ app.use('/chat', [checkLogin], chatRouter);
 
 //Home
 app.get('/', (req, res) => {
-    res.send('https://bit.ly/2Ui1Lgk');
+    res.redirect('https://bit.ly/2Ui1Lgk');
 });
 
 const mongoUrl = process.env.mongoUrl;
