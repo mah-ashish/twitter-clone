@@ -67,7 +67,7 @@ router.get('/:id', (req, res) => {
 });
 
 //update tweet
-router.put('/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
     let id = req.params.id;
     let content = req.body.content;
 
@@ -155,7 +155,7 @@ router.post('/:tweetid/comments', (req, res) => {
 });
 
 //edit a comment
-router.put('/:tweetid/comments', (req, res) => {
+router.patch('/:tweetid/comments', (req, res) => {
     const tweetid = req.params.tweetid;
     const commentid = req.body.commentid
     const body = req.body.content;
